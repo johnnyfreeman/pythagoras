@@ -1,16 +1,12 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/grids', 'GridController@index')->name('grids.index');
+Route::get('/grids/{grid}', 'GridController@show')->name('grids.show');
+Route::get('/grids/{grid}/play', 'GridController@play')->name('grids.play');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/grids/{grid}/play/{value}', 'GridController@show')->name('grids.play.value');
+Route::post('/grids/{grid}/play/{value}', 'GridController@check')->name('grids.check');
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');
