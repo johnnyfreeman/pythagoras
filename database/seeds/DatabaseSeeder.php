@@ -12,9 +12,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Grid::generate('Beginner', range(1,5), range(1, 5));
-        Grid::generate('Intermediate', range(1,12), range(1, 12));
-        Grid::generate('Advanced', range(6, 18), range(6, 18));
-        Grid::generate('Prime', [2,3,5,7,11,13, 17, 19, 23, 29], [2,3,5,7,11,13, 17, 19, 23, 29]);
+        Grid::generate('Beginner (6-10)', range(1,5), range(1, 5));
+        Grid::generate('Beginner (6-10)', range(6, 10), range(6, 10));
+        Grid::generate('Intermediate (1-12)', range(1, 12), range(1, 12));
+        Grid::generate('Advanced (6-18)', range(6, 18), range(6, 18));
+        Grid::generate('Prime (Primes 2-29)', [2,3,5,7,11,13, 17, 19, 23, 29], [2,3,5,7,11,13, 17, 19, 23, 29]);
     }
 }
