@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/grids', 'GridController@index')->name('grids.index');
 Route::get('/grids/{grid}', 'GridController@show')->name('grids.show');
 Route::get('/grids/{grid}/play', 'GridController@play')->name('grids.play');
